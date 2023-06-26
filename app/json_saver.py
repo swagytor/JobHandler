@@ -35,7 +35,9 @@ class JSONSaver(Saver):
                     data = json.load(json_file)
                 except json.decoder.JSONDecodeError:
                     data = []
-            return data
+        else:
+            data = []
+        return data
 
     def clear_vacancies(self):
         if os.path.exists(self.PATH_TO_JSON):

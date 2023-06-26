@@ -1,0 +1,142 @@
+[
+  {
+    "vacancy_id": "81568061",
+    "title": "Программист",
+    "url": "https://hh.ru/vacancy/81568061",
+    "city": "Санкт-Петербург",
+    "experience": "Более 6 лет",
+    "salary_info": {
+      "from": 800000,
+      "to": 800000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 800000 RUR"
+  },
+  {
+    "vacancy_id": "82175449",
+    "title": "Младший аналитик (IT)",
+    "url": "https://hh.ru/vacancy/82175449",
+    "city": "Санкт-Петербург",
+    "experience": "Нет опыта",
+    "salary_info": {
+      "from": 100000,
+      "to": 140000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 100000 до 140000 RUR"
+  },
+  {
+    "vacancy_id": "81551908",
+    "title": "Junior Frontend-разработчик",
+    "url": "https://hh.ru/vacancy/81551908",
+    "city": "Санкт-Петербург",
+    "experience": "Нет опыта",
+    "salary_info": {
+      "from": 120000,
+      "to": 120000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "до 120000 RUR"
+  },
+  {
+    "vacancy_id": "82354064",
+    "title": "Разработчик веб-приложений",
+    "url": "https://hh.ru/vacancy/82354064",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 110000,
+      "to": 110000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 110000 RUR"
+  },
+  {
+    "vacancy_id": "81891227",
+    "title": "Frontend-разработчик",
+    "url": "https://hh.ru/vacancy/81891227",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 80000,
+      "to": 120000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 80000 до 120000 RUR"
+  },
+  {
+    "vacancy_id": "81674143",
+    "title": "Frontend-разработчик",
+    "url": "https://hh.ru/vacancy/81674143",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 100000,
+      "to": 100000,
+      "currency": "RUR",
+      "gross": true
+    },
+    "salary": "от 100000 RUR"
+  },
+  {
+    "vacancy_id": "82113475",
+    "title": "Web-программист",
+    "url": "https://hh.ru/vacancy/82113475",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 100000,
+      "to": 100000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 100000 RUR"
+  },
+  {
+    "vacancy_id": "82203632",
+    "title": "Frontend (JS, TypeScript, React)",
+    "url": "https://hh.ru/vacancy/82203632",
+    "city": "Санкт-Петербург",
+    "experience": "От 3 до 6 лет",
+    "salary_info": {
+      "from": 70000,
+      "to": 110000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 70000 до 110000 RUR"
+  },
+  {
+    "vacancy_id": "82282951",
+    "title": "Frontend-разработчик (middle)",
+    "url": "https://hh.ru/vacancy/82282951",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 90000,
+      "to": 90000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 90000 RUR"
+  },
+  {
+    "vacancy_id": "81980337",
+    "title": "Frontend-разработчик",
+    "url": "https://hh.ru/vacancy/81980337",
+    "city": "Санкт-Петербург",
+    "experience": "От 1 года до 3 лет",
+    "salary_info": {
+      "from": 70000,
+      "to": 100000,
+      "currency": "RUR",
+      "gross": false
+    },
+    "salary": "от 70000 до 100000 RUR"
+  }
+]
