@@ -13,3 +13,7 @@ class Saver(ABC):
     @abstractmethod
     def clear_vacancies(self):
         pass
+
+    @abstractmethod
+    def get_vacancies_by_salary(self, vacancy_data):
+        pass
