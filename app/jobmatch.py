@@ -10,7 +10,7 @@ BASEDIR = os.path.abspath('..')
 PATH_TO_DATA = os.path.join(BASEDIR, 'data')
 PATH_TO_JSON = os.path.join(PATH_TO_DATA, 'vacancies.json')
 PLATFORMS = ("HeadHunter", "SuperJob")
-STOP_COMMANDS = ('stop', 'стоп', 'флюгегехаймен')
+STOP_COMMANDS = ('0', 'stop', 'стоп', 'флюгегехаймен')
 
 headhunter_api = HeadHunterAPI()
 superjob_api = SuperJobAPI()
@@ -118,47 +118,22 @@ def search_history():
           '1. Посмотреть историю поиска\n'
           '2. Стереть историю поиска\n')
     user_input = get_user_answer()
+
     if user_input == '1':
-        json_data = json_saver.load_vacancies()
-
-        if not json_data:
-            return
-        elif json_data:
-            print('Выберите критерии просмотра вакансий\n'
-                  '1. Без критериев\n'
-                  '2. По зарплате\n')
-
-            user_input = get_user_answer()
-
-            if user_input == '1':
-                resulting_search = [Vacancy(**data) for data in json_data]
-            elif user_input == '2':
-                print('Введите желаемую зарплату ОТ или просто нажмите ENTER')
-                salary_from = get_number()
-
-                print('Введите желаемую зарплату ДО или просто нажмите ENTER')
-                user_input = get_number()
-                salary_to = user_input if user_input else 1000000
-
-                resulting_search = [Vacancy(**data) for data in json_data
-                                    if
-                                    salary_from < data['salary_info']['from'] and salary_to > data['salary_info'][
-                                        'to']]
-
-            return resulting_search
-
-        else:
-            return
+        selected_history = json_saver.show_history()
+        if selected_history is None:
+            return None
+        elif selected_history:
+            return [Vacancy(**data) for data in selected_history]
 
     elif user_input == '2':
         json_saver.clear_vacancies()
 
 
 def user_interaction():
-    user_input = None
     city_search = change_city_search()
 
-    while user_input not in STOP_COMMANDS:
+    while True:
         print(f'Город поиска: {city_search}\n'
               'Выберите команду:\n'
               '0. Выйти\n'
@@ -166,9 +141,9 @@ def user_interaction():
               '2. Сменить город\n'
               '3. История поиска\n')
 
-        user_input = input('Введите команду:\n')
+        user_input = input('Введите команду:\n').lower()
 
-        if user_input == '0':
+        if user_input in STOP_COMMANDS:
             print('Выход из приложения')
             return
 
@@ -190,6 +165,3 @@ def user_interaction():
 
         else:
             print('Неизвестная команда!\n')
-
-
-

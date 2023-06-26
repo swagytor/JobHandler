@@ -13,3 +13,7 @@ class Saver(ABC):
     @abstractmethod
     def clear_vacancies(self):
         pass
+
+    @abstractmethod
+    def show_history(self):
+        pass
