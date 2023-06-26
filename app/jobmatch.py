@@ -3,7 +3,7 @@ import os.path
 from app.api_hh import HeadHunterAPI
 from app.api_sj import SuperJobAPI
 from app.json_saver import JSONSaver
-from app.utils import get_user_answer, get_number
+from app.utils import get_user_answer
 from app.vacancy import Vacancy
 
 BASEDIR = os.path.abspath('..')

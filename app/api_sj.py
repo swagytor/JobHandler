@@ -1,12 +1,7 @@
 import os
 import requests
-from pprint import pprint
-from html2text import html2text
 
 api_key = os.getenv("SJ_API_KEY")
-
-
-# print(api_key)
 
 
 class SuperJobAPI:
