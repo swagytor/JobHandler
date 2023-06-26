@@ -4,6 +4,9 @@ from abs.api_agent import APIAgent
 
 
 class HeadHunterAPI(APIAgent):
+    """
+    Агент для работы с сайтом HH.ru для получения вакансий
+    """
     __instance = None
 
     params = {'text': None,
@@ -22,17 +25,28 @@ class HeadHunterAPI(APIAgent):
         cls.__instance = None
 
     @classmethod
-    def get_vacancies(cls, vacancy_title=None):
+    def get_vacancies(cls, vacancy_title: str = None) -> list[dict]:
+        """
+        Получает список вакансий, согласно заданным параметрам
+        :param vacancy_title: название вакансии, которую будем искать
+        :return: список с обобщённой информацией о вакансии
+        """
         cls.params['text'] = vacancy_title
 
+        # делаем запрос на hh.ru, чтобы получить список с данными вакансий
         vacancy_response = requests.get('https://api.hh.ru/vacancies', params=cls.params)
-
+        # с помощью метода parse_info() преобразовываем информацию о вакансии в обобщённый вид
         parsed_response = [HeadHunterAPI.__parse_info(vacancy) for vacancy in vacancy_response.json()['items']]
 
         return parsed_response
 
     @staticmethod
-    def __parse_info(vacancy_response):
+    def __parse_info(vacancy_response: dict) -> dict:
+        """
+        Возвращает данные о вакансии в обобщенном виде
+        :param vacancy_response: данные о вакансии
+        :return: обобщённые данные о вакансии
+        """
         parsed_response = {
             'vacancy_id': None,
             'title': None,
